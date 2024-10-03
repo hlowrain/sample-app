@@ -1,0 +1,31 @@
+<ContentDialog
+    x:Class="YourNamespace.LegalNoticeDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Legal Notice"
+    PrimaryButtonText="OK"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick">
+
+    <ContentDialog.Resources>
+        <Style x:Key="DialogStyle" TargetType="ContentDialog">
+            <Setter Property="MaxWidth" Value="800"/>
+            <Setter Property="MaxHeight" Value="600"/>
+        </Style>
+    </ContentDialog.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Disabled">
+            <TextBlock TextWrapping="Wrap" Margin="0,0,0,12">
+                [Your legal notice text goes here. This can be quite long and will scroll if necessary.]
+            </TextBlock>
+        </ScrollViewer>
+    </Grid>
+</ContentDialog>
